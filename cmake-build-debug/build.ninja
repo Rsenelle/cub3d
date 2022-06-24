@@ -84,6 +84,12 @@ build CMakeFiles/Cube3D.dir/src/utils.c.o: C_COMPILER__Cube3D_Debug /Users/rsene
   OBJECT_DIR = CMakeFiles/Cube3D.dir
   OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/src
 
+build CMakeFiles/Cube3D.dir/src/parsing.c.o: C_COMPILER__Cube3D_Debug /Users/rsenelle/cub3D/src/parsing.c || cmake_object_order_depends_target_Cube3D
+  DEP_FILE = CMakeFiles/Cube3D.dir/src/parsing.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cube3D.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Cube3D
@@ -92,7 +98,7 @@ build CMakeFiles/Cube3D.dir/src/utils.c.o: C_COMPILER__Cube3D_Debug /Users/rsene
 #############################################
 # Link the executable Cube3D
 
-build Cube3D: C_EXECUTABLE_LINKER__Cube3D_Debug CMakeFiles/Cube3D.dir/src/main.c.o CMakeFiles/Cube3D.dir/src/utils.c.o
+build Cube3D: C_EXECUTABLE_LINKER__Cube3D_Debug CMakeFiles/Cube3D.dir/src/main.c.o CMakeFiles/Cube3D.dir/src/utils.c.o CMakeFiles/Cube3D.dir/src/parsing.c.o
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6
   OBJECT_DIR = CMakeFiles/Cube3D.dir
   POST_BUILD = :

@@ -2,8 +2,8 @@
 // Created by Romaine Senelle on 6/24/22.
 //
 
-#ifndef CUBE3D_CUB3D_H
-#define CUBE3D_CUB3D_H
+#ifndef CUB3D_H
+# define CUB3D_H
 
 # include <stdio.h>
 # include <unistd.h>
@@ -13,35 +13,29 @@
 # include "../libft/libft.h"
 # include "get_next_line.h"
 
-typedef struct s_slg
+typedef struct s_all
 {
 	char		**map;
 	char		**params;
 	size_t		heigth;
 	size_t		width;
-	size_t		p;
+	size_t		n;
+	size_t		s;
 	size_t		e;
-	size_t		c;
+	size_t		w;
+	char		*no;
+	char		*we;
+	char		*ea;
+	char		*so;
+	char		*floor;
+	char		*ceilling;
 	size_t		p_i;
 	size_t		p_j;
-	void		*mlx;
-	void		*mlx_win;
-	void		*field;
-	void		*player;
-	void		*ex;
-	void		*coll;
-	void		*wall;
-	void		*closed_ex;
-	void		*gameover;
-	int			img_width;
-	int			img_height;
-	char		*addr;
-	int			bits_per_pixel;
-	int			line_length;
-	int			endian;
-	int			moves;
+}			t_all;
 
-}
-
+void parsing(char *map_name, t_all *s_all);
+int	ft_error(char *str);
+int	check_map_file(char *map_name);
+void	making_map(char *map_name, t_all *slg, int fd);
 
 #endif
