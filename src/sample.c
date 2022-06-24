@@ -2,26 +2,34 @@
 // Created by Romaine Senelle on 6/24/22.
 //
 
-#include <stdio.h>
+#include "../includes/cub3d.h"
 
-int	is_map_beginning(char *s)
+int	*parse_color(char *color)
 {
-	if (s == 0 || *s == 0)
-		return (1);
-	while(*s && *s != '\n')
+	int		res[3];
+//	char	*dst;
+	int		i;
+
+	i = 0;
+	if (!consist_of_num_or_coma(color))
+		ft_error("Wrong floor or ceilling color");
+	while (i < 3)
 	{
-		if (*s != ' ' && *s != '1')
-			return (1);
-		s++;
+		res[i] = ft_atoi(color);
+		while (*color && *color != ',')
+			color++;
+		color++;
+		i++;
 	}
-	return (0);
+	printf("%d %d %d\n", res[0], res[1], res[2]);
+	return 0;
 }
 
 int main ()
 {
 	char *s;
 
-	s = "";
-	printf("result: %d", is_map_beginning(s));
+	s = "220,100,0";
+	parse_color(s);
 }
 

@@ -13,3 +13,29 @@ int	ft_error(char *str)
 		perror(0);
 	exit (-1);
 }
+
+char	*skip_space(char *s)
+{
+	while(*s == ' ')
+		s++;
+	return (s);
+}
+
+int	consist_of_num_or_coma(char *s)
+{
+	size_t coma;
+
+	coma = 0;
+	if (s == 0 || *s == 0)
+		return (0);
+	while (*s) {
+		if (*s == ',')
+			coma++;
+		if ((*s <= '0' || *s >= '9') && *s != ',')
+			return (0);
+		s++;
+	}
+	if (coma != 2)
+		return (0);
+	return (1);
+}

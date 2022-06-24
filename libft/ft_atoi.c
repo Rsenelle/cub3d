@@ -26,7 +26,7 @@ static int	pars_minus(const char *str, int *i, long int *n)
 	return (1);
 }
 
-int	ft_atoi_ps(const char *str, int *num)
+int	ft_atoi(const char *str)
 {
 	int			i;
 	long int	n;
@@ -38,16 +38,15 @@ int	ft_atoi_ps(const char *str, int *num)
 	while (((str[i] >= 7) && (str[i] <= 13)) || (str[i] == ' '))
 		i++;
 	if (!pars_minus (str, &i, &n))
-		return (1);
+		return (0);
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		k = (k * 10) + str[i] - '0';
 		if ((k * n) > 2147483647)
-			return (1);
+			return (-1);
 		if ((k * n) < -2147483648)
-			return (1);
+			return (0);
 		i++;
 	}
-	*num = k * n;
-	return (0);
+	return (k * n);
 }

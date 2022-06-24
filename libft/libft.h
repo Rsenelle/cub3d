@@ -22,6 +22,8 @@ typedef struct s_list
 	struct s_list	*next;
 }				t_list;
 
+
+int		ft_atoi(const char *str);
 int		ft_isdigit(char c);
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
@@ -69,6 +71,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 // void	ft_lstiter(t_list *lst, void (*f)(void *));
 
-int		ft_atoi_ps(const char *str, int *num);
 
 #endif

@@ -9,7 +9,7 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <sys/errno.h>
-# include <mlx.h>
+# include "../minilibx/mlx.h"
 # include "../libft/libft.h"
 # include "get_next_line.h"
 
@@ -33,9 +33,18 @@ typedef struct s_all
 	size_t		p_j;
 }			t_all;
 
-void parsing(char *map_name, t_all *s_all);
-int	ft_error(char *str);
-int	check_map_file(char *map_name);
+void	parsing(char *map_name, t_all *s_all);
+int		ft_error(char *str);
+int		check_map_file(char *map_name);
 void	making_map(char *map_name, t_all *slg, int fd);
+int		is_map_beginning(char *s);
+void	check_param(char *s, t_all *s_all);
+char	*skip_space(char *s);
+void	set_params(char *map_name, t_all *s_all, int fd);
+int		create_trgb(int t, int r, int g, int b);
+int		consist_of_num_or_coma(char *s);
+int		*parse_color(char *color);
+
+
 
 #endif
