@@ -4,25 +4,23 @@
 
 #include "../includes/cub3d.h"
 
-int	*parse_color(char *color)
+int	consist_of_num_or_coma(char *s)
 {
-	int		res[3];
-//	char	*dst;
-	int		i;
+	size_t coma;
 
-	i = 0;
-	if (!consist_of_num_or_coma(color))
-		ft_error("Wrong floor or ceilling color");
-	while (i < 3)
-	{
-		res[i] = ft_atoi(color);
-		while (*color && *color != ',')
-			color++;
-		color++;
-		i++;
+	coma = 0;
+	if (s == 0 || *s == 0)
+		return (0);
+	while (*s) {
+		if (*s == ',')
+			coma++;
+		if ((*s <= '0' || *s >= '9') && *s != ',')
+			return (0);
+		s++;
 	}
-	printf("%d %d %d\n", res[0], res[1], res[2]);
-	return 0;
+	if (coma != 2)
+		return (0);
+	return (1);
 }
 
 int main ()
@@ -30,6 +28,6 @@ int main ()
 	char *s;
 
 	s = "220,100,0";
-	parse_color(s);
+	printf("result: %d", consist_of_num_or_coma(s));
 }
 

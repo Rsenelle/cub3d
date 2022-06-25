@@ -9,7 +9,7 @@ void parsing(char *map_name, t_all *s_all)
 	int	fd;
 
 	fd = check_map_file(map_name);
-	set_params(map_name, s_all, fd);
+	set_params(s_all, fd);
 //	making_map(map_name, s_all, fd);
 }
 
@@ -50,7 +50,7 @@ int	check_map_file(char *map_name)
 //	s_all->map[i] = NULL;
 //}
 
-void	set_params(char *map_name, t_all *s_all, int fd)
+void	set_params(t_all *s_all, int fd)
 {
 	char	*s;
 
@@ -66,7 +66,7 @@ void	set_params(char *map_name, t_all *s_all, int fd)
 		check_param(s, s_all);
 		free(s);
 	}
-	}
+}
 
 int	is_map_beginning(char *s)
 {
@@ -96,35 +96,40 @@ void	check_param(char *s, t_all *s_all)
 		s_all->ea = ft_strdup(skip_space(s + 2));
 	else if (!ft_strncmp(s, "F ", 2))
 	{
-		printf("floor\n");
 		floor = ft_strdup(skip_space(s + 2));
-		parse_color(floor);
+		s_all->floor = parse_color(floor);
+		free(floor);
 	}
-	else if (ft_strncmp(s, "C ", 2))
+	else if (!ft_strncmp(s, "C ", 2))
+	{
 		ceilling = ft_strdup(skip_space(s + 2));
+		s_all->ceilling = parse_color(ceilling);
+		free(ceilling);
+	}
 }
 
-int	*parse_color(char *color)
+int	parse_color(char *color)
 {
-	int		res[3];
+	int		rgb[3];
 	int		i;
+	int		res;
 
 	i = 0;
-	if (!consist_of_num_or_coma(color))
+	if (consist_of_num_or_coma(color))
 		ft_error("Wrong floor or ceilling color");
 	while (i < 3)
 	{
-		res[i] = ft_atoi(color);
+		rgb[i] = ft_atoi(color);
 		while (*color && *color != ',')
 			color++;
+		if (rgb[i] < 0 || rgb[i] > 255)
+			ft_error("Wrong color number");
 		color++;
 		i++;
 	}
-	printf("%d %d %d\n", res[0], res[1], res[2]);
-	return 0;
+	res = create_trgb(0, rgb[0], rgb[1], rgb[2]);
+	return (res);
 }
-
-
 
 int	create_trgb(int t, int r, int g, int b)
 {

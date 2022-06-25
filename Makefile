@@ -1,6 +1,7 @@
 NAME		=	cub3D
 
-SRCS_F		=	main.c	get_next_line.c	get_next_line_utils.c	parsing.c	utils.c
+SRCS_F		=	main.c	get_next_line.c	get_next_line_utils.c	parsing.c	utils.c\
+				init_struct.c
 
 SRCS_D		=	src/
 

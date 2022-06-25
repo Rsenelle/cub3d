@@ -2,12 +2,13 @@
 
 int	main(int argc, char **argv)
 {
-	int		i;
+//	int		i;
 	t_all	s_all;
 
 //	int fd;
 //	i = 0
 	if (argc == 2) {
+		init_struct(&s_all);
 		while (1) {
 			parsing(argv[1], &s_all);
 			exit(0);
