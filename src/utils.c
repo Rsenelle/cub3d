@@ -39,3 +39,4 @@ int	consist_of_num_or_coma(char *s)
 		return (0);
 	return (1);
 }
+

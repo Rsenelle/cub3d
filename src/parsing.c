@@ -27,29 +27,6 @@ int	check_map_file(char *map_name)
 	return (fd);
 }
 
-//void	making_map(char *map_name, t_all *s_all, int fd)
-//{
-//	size_t	i;
-//
-//	i = 0;
-//	s_all->heigth = count_strings(fd);
-//	close(fd);
-//	s_all->map = malloc(sizeof(char *) * (s_all->heigth + 1));
-//	if (!s_all->map)
-//		ft_error(NULL);
-//	fd = open(map_name, O_RDONLY);
-//	if (fd < 0)
-//		ft_error(NULL);
-//	while (i < s_all->heigth)
-//	{
-//		s_all->map[i] = get_next_line(fd);
-//		if (s_all->map[i] == NULL)
-//			ft_error("Invalid map");
-//		i++;
-//	}
-//	s_all->map[i] = NULL;
-//}
-
 void	set_params(t_all *s_all, int fd)
 {
 	char	*s;
@@ -135,3 +112,5 @@ int	create_trgb(int t, int r, int g, int b)
 {
 	return (t << 24 | r << 16 | g << 8 | b);
 }
+
+////карту в листы, а потом листы в массив

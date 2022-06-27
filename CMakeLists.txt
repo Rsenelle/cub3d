@@ -3,4 +3,4 @@ project(Cube3D C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(Cube3D src/main.c src/utils.c includes/cub3d.h src/parsing.c src/init_struct.c)
+add_executable(Cube3D src/main.c src/utils.c includes/cub3d.h src/parsing.c src/init_struct.c src/making_map.c)

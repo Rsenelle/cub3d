@@ -44,6 +44,7 @@ void	set_params(t_all *s_all, int fd);
 int		create_trgb(int t, int r, int g, int b);
 int		consist_of_num_or_coma(char *s);
 int		parse_color(char *color);
+int		count_strings_for_map(int fd);
 
 
 
