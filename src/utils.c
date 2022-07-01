@@ -16,7 +16,7 @@ int	ft_error(char *str)
 
 char	*skip_space(char *s)
 {
-	while(*s == ' ')
+	while(*s == ' ' || *s == '\t')
 		s++;
 	return (s);
 }

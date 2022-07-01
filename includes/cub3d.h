@@ -36,7 +36,7 @@ void	init_struct(t_all *s_all);
 void	parsing(char *map_name, t_all *s_all);
 int		ft_error(char *str);
 int		check_map_file(char *map_name);
-void	making_map(char *map_name, t_all *slg, int fd);
+t_list	*make_map_in_lists(char *map_name);
 int		is_map_beginning(char *s);
 void	check_param(char *s, t_all *s_all);
 char	*skip_space(char *s);
@@ -45,6 +45,7 @@ int		create_trgb(int t, int r, int g, int b);
 int		consist_of_num_or_coma(char *s);
 int		parse_color(char *color);
 int		count_strings_for_map(int fd);
+int		is_map(char *s);
 
 
 

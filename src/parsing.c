@@ -10,7 +10,7 @@ void parsing(char *map_name, t_all *s_all)
 
 	fd = check_map_file(map_name);
 	set_params(s_all, fd);
-//	making_map(map_name, s_all, fd);
+//	making_map(map_name, s_all);
 }
 
 int	check_map_file(char *map_name)
@@ -43,6 +43,7 @@ void	set_params(t_all *s_all, int fd)
 		check_param(s, s_all);
 		free(s);
 	}
+	close(fd);
 }
 
 int	is_map_beginning(char *s)
@@ -51,7 +52,7 @@ int	is_map_beginning(char *s)
 		return (0);
 	while(*s && *s != '\n')
 	{
-		if (*s != ' ' && *s != '1')
+		if (*s != ' ' && *s != '1' && *s != '\t')
 			return (0);
 		s++;
 	}

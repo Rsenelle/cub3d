@@ -4,30 +4,71 @@
 
 #include "../includes/cub3d.h"
 
-int	consist_of_num_or_coma(char *s)
-{
-	size_t coma;
+c
 
-	coma = 0;
+int	is_map_beginning(char *s)
+{
 	if (s == 0 || *s == 0)
 		return (0);
-	while (*s) {
-		if (*s == ',')
-			coma++;
-		if ((*s <= '0' || *s >= '9') && *s != ',')
+	while(*s && *s != '\n')
+	{
+		if (*s != ' ' && *s != '1' && *s != '\t')
 			return (0);
 		s++;
 	}
-	if (coma != 2)
-		return (0);
 	return (1);
 }
 
-int main ()
+void	printlist(t_list *lst)
 {
-	char *s;
+	int i;
 
-	s = "220,100,0";
-	printf("result: %d", consist_of_num_or_coma(s));
+	i = 0;
+	if (!lst)
+		ft_error("NO LIST");
+	while(lst)
+	{
+		printf("%d %s\n", i++, lst->str);
+		lst=lst->next;
+	}
+}
+
+t_list	*make_map_in_lists(char *map_name)
+{
+	t_list	*map;
+	char	*s;
+	int 	fd;
+
+	map = 0;
+	fd = open(map_name, O_RDONLY);
+	if (fd < 0)
+		ft_error(NULL);
+	while (1)
+	{
+		s = get_next_line(fd);
+//		printf("first cycle: %s\n", s);
+		if (!s || is_map_beginning(s))
+			break ;
+	}
+	while (s)
+	{
+		if (!is_map(s))
+			ft_error("Wrong map");
+		ft_lstadd_back(&map, ft_lstnew(ft_strdup(s)));
+		free(s);
+		s = get_next_line(fd);
+	}
+	free(s);
+	close(fd);
+	return(map);
+}
+
+int main (int argc, char **argv)
+{
+	t_list *sample;
+
+	(void)argc;
+	sample = make_map_in_lists(argv[1]);
+	printlist(sample);
 }
 
