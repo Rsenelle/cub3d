@@ -24,7 +24,7 @@ LIBFT		=	./libft/libft.a
 
 $(NAME)		:	$(OBJS)
 				@echo '✨ ✨ ✨ \n'`$(MAKE) -C $(dir $(LIBFT))`''
-				@make -C $(dir $(MLX))
+				make -C $(dir $(MLX))
 				cp $(MLX) .
 				@echo './cub3D was created!'`$(CC) $(CFLAGS) $(INCLUDE) $(MLX)  $(LIBFT) $(OBJS) $(OPENGL) -o $(NAME)`''
 

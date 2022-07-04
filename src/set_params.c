@@ -79,27 +79,27 @@ int	create_trgb(int t, int r, int g, int b)
 	return (t << 24 | r << 16 | g << 8 | b);
 }
 
-int	get_textures(t_all *s_all)
+void	get_textures(t_all *s_all)
 {
 	if (!s_all->no || !s_all->ea || !s_all->so || !s_all->we)
 		ft_error("Not all params are set");
-	s_all->north_img->img = mlx_xpm_file_to_image(s_all->north_img->mlx, \
-	s_all->no, s_all->north_img->width, s_all->north_img->heigth);
-	s_all->south_img->img = mlx_xpm_file_to_image(s_all->south_img->mlx, \
-	s_all->no, s_all->south_img->width, s_all->south_img->heigth);
-	s_all->west_img->img = mlx_xpm_file_to_image(s_all->west_img->mlx, \
-	s_all->no, s_all->west_img->width, s_all->west_img->heigth);
-	s_all->east_img->img = mlx_xpm_file_to_image(s_all->east_img->mlx, \
-	s_all->no, s_all->east_img->width, s_all->east_img->heigth);
-	if (!s_all->north_img->img || !s_all->south_img->img || !s_all->west_img->img || !s_all->east_img->img)
+	s_all->n_img.img = mlx_xpm_file_to_image(s_all->n_img.mlx, \
+	s_all->no, s_all->n_img.width, s_all->n_img.heigth);
+	s_all->s_img.img = mlx_xpm_file_to_image(s_all->s_img.mlx, \
+	s_all->no, s_all->s_img.width, s_all->s_img.heigth);
+	s_all->w_img.img = mlx_xpm_file_to_image(s_all->w_img.mlx, \
+	s_all->no, s_all->w_img.width, s_all->w_img.heigth);
+	s_all->e_img.img = mlx_xpm_file_to_image(s_all->e_img.mlx, \
+	s_all->no, s_all->e_img.width, s_all->e_img.heigth);
+	if (!s_all->n_img.img || !s_all->s_img.img || !s_all->w_img.img || \
+	!s_all->e_img.img)
 		ft_error("Wrong texture path");
-	s_all->north_img->addr = mlx_get_data_addr(s_all->north_img->mlx, \
-	s_all->north_img->bits_per_pixel, s_all->north_img->line_length, s_all->north_img->endian);
-	s_all->south_img->addr = mlx_get_data_addr(s_all->south_img->mlx, \
-	s_all->south_img->bits_per_pixel, s_all->south_img->line_length, s_all->south_img->endian);
-	s_all->west_img->addr = mlx_get_data_addr(s_all->west_img->mlx, \
-	s_all->west_img->bits_per_pixel, s_all->west_img->line_length, s_all->west_img->endian);
-	s_all->east_img->addr = mlx_get_data_addr(s_all->east_img->mlx, \
-	s_all->east_img->bits_per_pixel, s_all->east_img->line_length, s_all->east_img->endian);
-
+	s_all->n_img.addr = mlx_get_data_addr(s_all->n_img.mlx, \
+s_all->n_img.bits_per_pixel, s_all->n_img.line_length, s_all->n_img.endian);
+	s_all->s_img.addr = mlx_get_data_addr(s_all->s_img.mlx, \
+s_all->s_img.bits_per_pixel, s_all->s_img.line_length, s_all->s_img.endian);
+	s_all->w_img.addr = mlx_get_data_addr(s_all->w_img.mlx, \
+s_all->w_img.bits_per_pixel, s_all->w_img.line_length, s_all->w_img.endian);
+	s_all->e_img.addr = mlx_get_data_addr(s_all->e_img.mlx, \
+s_all->e_img.bits_per_pixel, s_all->e_img.line_length, s_all->e_img.endian);
 }

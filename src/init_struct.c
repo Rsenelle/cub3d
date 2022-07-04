@@ -7,8 +7,8 @@
 void	init_struct(t_all *s_all)
 {
 	s_all->map = NULL;
-	s_all->heigth = 0;
-	s_all->width = 0;
+	s_all->map_heigth = 0;
+	s_all->map_width = 0;
 	s_all->n = 0;
 	s_all->s = 0;
 	s_all->e = 0;
@@ -22,3 +22,5 @@ void	init_struct(t_all *s_all)
 	s_all->p_i = 0;
 	s_all->p_j = 0;
 }
+
+

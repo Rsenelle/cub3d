@@ -44,12 +44,12 @@ void	make_map_array(t_all *s_all, char *map_name)
 
 	map_list = make_map_in_lists(map_name);
 	head = map_list;
-	s_all->heigth = ft_lstsize(map_list);
-	s_all->map = (char**)malloc(sizeof(char *) * (s_all->heigth + 1));
+	s_all->map_heigth = ft_lstsize(map_list);
+	s_all->map = (char**)malloc(sizeof(char *) * (s_all->map_heigth + 1));
 	if (!s_all->map)
 		ft_error(NULL);
 	i = 0;
-	while (i < s_all->heigth)
+	while (i < s_all->map_heigth)
 	{
 		s_all->map[i] = ft_strdup(map_list->str);
 		map_list = map_list->next;

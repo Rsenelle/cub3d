@@ -11,7 +11,7 @@ int	main(int argc, char **argv)
 		while (1)
 		{
 			parsing(argv[1], &s_all);
-			while(1);
+//			while(1);
 			exit(0);
 		}
 	}
