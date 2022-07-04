@@ -13,6 +13,17 @@
 # include "../libft/libft.h"
 # include "get_next_line.h"
 
+typedef struct	s_image {
+	void	*mlx;
+	void	*img;
+	char	*addr;
+	int		*heigth;
+	int		*width;
+	int		bits_per_pixel;
+	int		line_length;
+	int		endian;
+}				t_image;
+
 typedef struct s_all
 {
 	char		**map;
@@ -30,22 +41,36 @@ typedef struct s_all
 	int 		ceilling;
 	size_t		p_i;
 	size_t		p_j;
+	t_image		*north_img;
+	t_image		*south_img;
+	t_image		*east_img;
+	t_image		*west_img;
 }			t_all;
+
 
 void	init_struct(t_all *s_all);
 void	parsing(char *map_name, t_all *s_all);
-int		ft_error(char *str);
 int		check_map_file(char *map_name);
-t_list	*make_map_in_lists(char *map_name);
-int		is_map_beginning(char *s);
-void	check_param(char *s, t_all *s_all);
-char	*skip_space(char *s);
+
+////params_parse
+void	choose_param(char *s, t_all *s_all);
 void	set_params(t_all *s_all, int fd);
 int		create_trgb(int t, int r, int g, int b);
-int		consist_of_num_or_coma(char *s);
 int		parse_color(char *color);
-int		count_strings_for_map(int fd);
+int		get_textures(t_all *s_all);
+
+////map_parse
+t_list	*make_map_in_lists(char *map_name);
+void	make_map_array(t_all *s_all, char *map_name);
 int		is_map(char *s);
+int		is_map_beginning(char *s);
+
+////utils
+void	printarray(char **map);
+void	printlist(t_list *lst);
+int		consist_of_num_or_coma(char *s);
+char	*skip_space(char *s);
+int		ft_error(char *str);
 
 
 

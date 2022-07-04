@@ -40,3 +40,28 @@ int	consist_of_num_or_coma(char *s)
 	return (1);
 }
 
+void	printarray(char **map)
+{
+	int	i;
+
+	i = 0;
+	while (map[i])
+	{
+		ft_putendl_fd(map[i], 1);
+		i++;
+	}
+}
+
+void	printlist(t_list *lst)
+{
+	int i;
+
+	i = 0;
+	if (!lst)
+		ft_error("NO LIST");
+	while(lst)
+	{
+		printf("%d %s\n", i++, lst->str);
+		lst=lst->next;
+	}
+}
