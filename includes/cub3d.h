@@ -14,14 +14,13 @@
 # include "get_next_line.h"
 
 typedef struct	s_image {
-	void	*mlx;
 	void	*img;
 	char	*addr;
-	int		*heigth;
-	int		*width;
-	int		*bits_per_pixel;
-	int		*line_length;
-	int		*endian;
+	int		heigth;
+	int		width;
+	int		bits_per_pixel;
+	int		line_length;
+	int		endian;
 }				t_image;
 
 typedef struct s_all
@@ -45,6 +44,7 @@ typedef struct s_all
 	t_image		s_img;
 	t_image		e_img;
 	t_image		w_img;
+	void	*mlx;
 }			t_all;
 
 
@@ -63,7 +63,8 @@ void		get_textures(t_all *s_all);
 t_list	*make_map_in_lists(char *map_name);
 void	make_map_array(t_all *s_all, char *map_name);
 int		is_map(char *s);
-int		is_map_beginning(char *s);
+int		is_map_border(char *s);
+int		check_map_borders(t_all *s_all);
 
 ////utils
 void	printarray(char **map);

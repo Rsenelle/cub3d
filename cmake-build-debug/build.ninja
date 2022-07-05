@@ -108,6 +108,102 @@ build CMakeFiles/Cube3D.dir/src/set_params.c.o: C_COMPILER__Cube3D_Debug /Users/
   OBJECT_DIR = CMakeFiles/Cube3D.dir
   OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/src
 
+build CMakeFiles/Cube3D.dir/src/check_map_borders.c.o: C_COMPILER__Cube3D_Debug /Users/rsenelle/cub3D/src/check_map_borders.c || cmake_object_order_depends_target_Cube3D
+  DEP_FILE = CMakeFiles/Cube3D.dir/src/check_map_borders.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cube3D.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/src
+
+build CMakeFiles/Cube3D.dir/libft/ft_atoi.c.o: C_COMPILER__Cube3D_Debug /Users/rsenelle/cub3D/libft/ft_atoi.c || cmake_object_order_depends_target_Cube3D
+  DEP_FILE = CMakeFiles/Cube3D.dir/libft/ft_atoi.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cube3D.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/libft
+
+build CMakeFiles/Cube3D.dir/libft/ft_lstadd_back.c.o: C_COMPILER__Cube3D_Debug /Users/rsenelle/cub3D/libft/ft_lstadd_back.c || cmake_object_order_depends_target_Cube3D
+  DEP_FILE = CMakeFiles/Cube3D.dir/libft/ft_lstadd_back.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cube3D.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/libft
+
+build CMakeFiles/Cube3D.dir/libft/ft_lstclear.c.o: C_COMPILER__Cube3D_Debug /Users/rsenelle/cub3D/libft/ft_lstclear.c || cmake_object_order_depends_target_Cube3D
+  DEP_FILE = CMakeFiles/Cube3D.dir/libft/ft_lstclear.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cube3D.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/libft
+
+build CMakeFiles/Cube3D.dir/libft/ft_lstnew.c.o: C_COMPILER__Cube3D_Debug /Users/rsenelle/cub3D/libft/ft_lstnew.c || cmake_object_order_depends_target_Cube3D
+  DEP_FILE = CMakeFiles/Cube3D.dir/libft/ft_lstnew.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cube3D.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/libft
+
+build CMakeFiles/Cube3D.dir/libft/ft_lstsize.c.o: C_COMPILER__Cube3D_Debug /Users/rsenelle/cub3D/libft/ft_lstsize.c || cmake_object_order_depends_target_Cube3D
+  DEP_FILE = CMakeFiles/Cube3D.dir/libft/ft_lstsize.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cube3D.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/libft
+
+build CMakeFiles/Cube3D.dir/libft/ft_putendl_fd.c.o: C_COMPILER__Cube3D_Debug /Users/rsenelle/cub3D/libft/ft_putendl_fd.c || cmake_object_order_depends_target_Cube3D
+  DEP_FILE = CMakeFiles/Cube3D.dir/libft/ft_putendl_fd.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cube3D.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/libft
+
+build CMakeFiles/Cube3D.dir/libft/ft_strdup.c.o: C_COMPILER__Cube3D_Debug /Users/rsenelle/cub3D/libft/ft_strdup.c || cmake_object_order_depends_target_Cube3D
+  DEP_FILE = CMakeFiles/Cube3D.dir/libft/ft_strdup.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cube3D.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/libft
+
+build CMakeFiles/Cube3D.dir/libft/ft_strlen.c.o: C_COMPILER__Cube3D_Debug /Users/rsenelle/cub3D/libft/ft_strlen.c || cmake_object_order_depends_target_Cube3D
+  DEP_FILE = CMakeFiles/Cube3D.dir/libft/ft_strlen.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cube3D.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/libft
+
+build CMakeFiles/Cube3D.dir/libft/ft_strncmp.c.o: C_COMPILER__Cube3D_Debug /Users/rsenelle/cub3D/libft/ft_strncmp.c || cmake_object_order_depends_target_Cube3D
+  DEP_FILE = CMakeFiles/Cube3D.dir/libft/ft_strncmp.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cube3D.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/libft
+
+build CMakeFiles/Cube3D.dir/libft/ft_lstdelone.c.o: C_COMPILER__Cube3D_Debug /Users/rsenelle/cub3D/libft/ft_lstdelone.c || cmake_object_order_depends_target_Cube3D
+  DEP_FILE = CMakeFiles/Cube3D.dir/libft/ft_lstdelone.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cube3D.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/libft
+
+build CMakeFiles/Cube3D.dir/libft/ft_lstlast.c.o: C_COMPILER__Cube3D_Debug /Users/rsenelle/cub3D/libft/ft_lstlast.c || cmake_object_order_depends_target_Cube3D
+  DEP_FILE = CMakeFiles/Cube3D.dir/libft/ft_lstlast.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cube3D.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/libft
+
+build CMakeFiles/Cube3D.dir/src/get_next_line.c.o: C_COMPILER__Cube3D_Debug /Users/rsenelle/cub3D/src/get_next_line.c || cmake_object_order_depends_target_Cube3D
+  DEP_FILE = CMakeFiles/Cube3D.dir/src/get_next_line.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cube3D.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/src
+
+build CMakeFiles/Cube3D.dir/src/get_next_line_utils.c.o: C_COMPILER__Cube3D_Debug /Users/rsenelle/cub3D/src/get_next_line_utils.c || cmake_object_order_depends_target_Cube3D
+  DEP_FILE = CMakeFiles/Cube3D.dir/src/get_next_line_utils.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cube3D.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/src
+
+build CMakeFiles/Cube3D.dir/minilibx/mlx_new_image.m.o: C_COMPILER__Cube3D_Debug /Users/rsenelle/cub3D/minilibx/mlx_new_image.m || cmake_object_order_depends_target_Cube3D
+  DEP_FILE = CMakeFiles/Cube3D.dir/minilibx/mlx_new_image.m.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cube3D.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/minilibx
+
+build CMakeFiles/Cube3D.dir/minilibx/mlx_xpm.c.o: C_COMPILER__Cube3D_Debug /Users/rsenelle/cub3D/minilibx/mlx_xpm.c || cmake_object_order_depends_target_Cube3D
+  DEP_FILE = CMakeFiles/Cube3D.dir/minilibx/mlx_xpm.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cube3D.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cube3D.dir/minilibx
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Cube3D
@@ -116,7 +212,7 @@ build CMakeFiles/Cube3D.dir/src/set_params.c.o: C_COMPILER__Cube3D_Debug /Users/
 #############################################
 # Link the executable Cube3D
 
-build Cube3D: C_EXECUTABLE_LINKER__Cube3D_Debug CMakeFiles/Cube3D.dir/src/main.c.o CMakeFiles/Cube3D.dir/src/utils.c.o CMakeFiles/Cube3D.dir/src/parsing.c.o CMakeFiles/Cube3D.dir/src/init_struct.c.o CMakeFiles/Cube3D.dir/src/making_map.c.o CMakeFiles/Cube3D.dir/src/set_params.c.o
+build Cube3D: C_EXECUTABLE_LINKER__Cube3D_Debug CMakeFiles/Cube3D.dir/src/main.c.o CMakeFiles/Cube3D.dir/src/utils.c.o CMakeFiles/Cube3D.dir/src/parsing.c.o CMakeFiles/Cube3D.dir/src/init_struct.c.o CMakeFiles/Cube3D.dir/src/making_map.c.o CMakeFiles/Cube3D.dir/src/set_params.c.o CMakeFiles/Cube3D.dir/src/check_map_borders.c.o CMakeFiles/Cube3D.dir/libft/ft_atoi.c.o CMakeFiles/Cube3D.dir/libft/ft_lstadd_back.c.o CMakeFiles/Cube3D.dir/libft/ft_lstclear.c.o CMakeFiles/Cube3D.dir/libft/ft_lstnew.c.o CMakeFiles/Cube3D.dir/libft/ft_lstsize.c.o CMakeFiles/Cube3D.dir/libft/ft_putendl_fd.c.o CMakeFiles/Cube3D.dir/libft/ft_strdup.c.o CMakeFiles/Cube3D.dir/libft/ft_strlen.c.o CMakeFiles/Cube3D.dir/libft/ft_strncmp.c.o CMakeFiles/Cube3D.dir/libft/ft_lstdelone.c.o CMakeFiles/Cube3D.dir/libft/ft_lstlast.c.o CMakeFiles/Cube3D.dir/src/get_next_line.c.o CMakeFiles/Cube3D.dir/src/get_next_line_utils.c.o CMakeFiles/Cube3D.dir/minilibx/mlx_new_image.m.o CMakeFiles/Cube3D.dir/minilibx/mlx_xpm.c.o
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6
   OBJECT_DIR = CMakeFiles/Cube3D.dir
   POST_BUILD = :

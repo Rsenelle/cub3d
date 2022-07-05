@@ -21,6 +21,9 @@ void	init_struct(t_all *s_all)
 	s_all->ceilling = 0;
 	s_all->p_i = 0;
 	s_all->p_j = 0;
+
+//TODO: for Anyuta: dont forget to init mlx
+////	s_all->mlx = mlx_init();
 }
 
 

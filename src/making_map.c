@@ -17,7 +17,7 @@ t_list	*make_map_in_lists(char *map_name)
 	while (1)
 	{
 		s = get_next_line(fd);
-		if (!s || is_map_beginning(s))
+		if (!s || is_map(s))
 			break ;
 		free (s);
 	}
@@ -73,7 +73,7 @@ int	is_map(char *s)
 	return (1);
 }
 
-int	is_map_beginning(char *s)
+int	is_map_border(char *s)
 {
 	if (s == 0 || *s == 0)
 		return (0);
