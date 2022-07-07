@@ -1,6 +1,14 @@
-//
-// Created by Romaine Senelle on 6/24/22.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cub3d.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rsenelle <rsenelle@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/07 14:28:20 by rsenelle          #+#    #+#             */
+/*   Updated: 2022/07/07 14:28:49 by rsenelle         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef CUB3D_H
 # define CUB3D_H
@@ -15,14 +23,14 @@
 # include "../minilibx/mlx.h"
 # include <math.h>
 
-typedef struct	s_plr
+typedef struct s_plr
 {
 	double	x;
 	double	y;
 	double	dir;
 }				t_plr;
 
-typedef struct	s_image {
+typedef struct s_image {
 	void	*img;
 	char	*addr;
 	int		heigth;
@@ -32,7 +40,7 @@ typedef struct	s_image {
 	int		endian;
 }				t_image;
 
-typedef struct	s_all
+typedef struct s_all
 {
 	char		**map;
 	size_t		map_heigth;
@@ -46,7 +54,7 @@ typedef struct	s_all
 	char		*ea;
 	char		*so;
 	int			floor;
-	int 		ceilling;
+	int			ceilling;
 	size_t		p_i;
 	size_t		p_j;
 	t_image		n_img;
@@ -57,7 +65,6 @@ typedef struct	s_all
 	t_plr		plr;
 }				t_all;
 
-
 void	init_struct(t_all *s_all);
 void	parsing(char *map_name, t_all *s_all);
 int		check_map_file(char *map_name);
@@ -67,7 +74,7 @@ void	choose_param(char *s, t_all *s_all);
 void	set_params(t_all *s_all, int fd);
 int		create_trgb(int t, int r, int g, int b);
 int		parse_color(char *color);
-void		get_textures(t_all *s_all);
+void	get_textures(t_all *s_all);
 
 ////map_parse
 t_list	*make_map_in_lists(char *map_name, int fd);
@@ -84,7 +91,5 @@ int		consist_of_num_or_coma(char *s);
 char	*skip_space(char *s);
 int		ft_error(char *str);
 int		check_fd(char *map_name);
-
-
 
 #endif
