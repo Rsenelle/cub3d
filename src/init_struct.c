@@ -22,9 +22,7 @@ void	init_struct(t_all *s_all)
 	s_all->p_i = 0;
 	s_all->p_j = 0;
 	s_all->mlx = mlx_init();
-	s_all->s_plr.x = 0;
-	s_all->s_plr.y = 0;
-	s_all->s_plr.dir = 0;
+	s_all->plr.x = 0;
+	s_all->plr.y = 0;
+	s_all->plr.dir = 0;
 }
-
-

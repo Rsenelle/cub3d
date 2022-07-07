@@ -12,7 +12,8 @@
 # include "../minilibx/mlx.h"
 # include "../libft/libft.h"
 # include "get_next_line.h"
-# include <mlx.h>
+# include "../minilibx/mlx.h"
+# include <math.h>
 
 typedef struct	s_plr
 {
@@ -69,7 +70,7 @@ int		parse_color(char *color);
 void		get_textures(t_all *s_all);
 
 ////map_parse
-t_list	*make_map_in_lists(char *map_name);
+t_list	*make_map_in_lists(char *map_name, int fd);
 void	make_map_array(t_all *s_all, char *map_name);
 int		is_map(char *s);
 int		is_map_border(char *s);
@@ -82,6 +83,7 @@ void	printlist(t_list *lst);
 int		consist_of_num_or_coma(char *s);
 char	*skip_space(char *s);
 int		ft_error(char *str);
+int		check_fd(char *map_name);
 
 
 

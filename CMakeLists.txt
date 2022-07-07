@@ -24,4 +24,4 @@ add_executable(Cube3D src/main.c src/utils.c includes/cub3d.h src/parsing.c
         minilibx/mlx_new_image.m
         minilibx/mlx_xpm.c
         libmlx.a
-        src/find_player.c)
+        src/find_player.c src/parse_utils.c)

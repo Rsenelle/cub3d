@@ -73,7 +73,9 @@
 				19,
 				20,
 				21,
-				22
+				22,
+				24,
+				25
 			]
 		}
 	],
@@ -127,7 +129,9 @@
 				19,
 				20,
 				21,
-				22
+				22,
+				24,
+				25
 			]
 		},
 		{
@@ -288,6 +292,18 @@
 			"backtrace" : 1,
 			"path" : "libmlx.a",
 			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/find_player.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/parse_utils.c",
+			"sourceGroupIndex" : 0
 		}
 	],
 	"type" : "EXECUTABLE"

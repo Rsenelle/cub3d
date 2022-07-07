@@ -4,16 +4,12 @@
 
 #include "../includes/cub3d.h"
 
-t_list	*make_map_in_lists(char *map_name)
+t_list	*make_map_in_lists(char *map_name, int fd)
 {
 	t_list	*map;
 	char	*s;
-	int 	fd;
 
 	map = 0;
-	fd = open(map_name, O_RDONLY);
-	if (fd < 0)
-		ft_error(NULL);
 	while (1)
 	{
 		s = get_next_line(fd);
@@ -33,7 +29,7 @@ t_list	*make_map_in_lists(char *map_name)
 		ft_error("No map");
 	free(s);
 	close(fd);
-	return(map);
+	return (map);
 }
 
 void	make_map_array(t_all *s_all, char *map_name)
@@ -41,11 +37,13 @@ void	make_map_array(t_all *s_all, char *map_name)
 	size_t	i;
 	t_list	*map_list;
 	t_list	*head;
+	int		fd;
 
-	map_list = make_map_in_lists(map_name);
+	fd = check_fd(map_name);
+	map_list = make_map_in_lists(map_name, fd);
 	head = map_list;
 	s_all->map_heigth = ft_lstsize(map_list);
-	s_all->map = (char**)malloc(sizeof(char *) * (s_all->map_heigth + 1));
+	s_all->map = (char **)malloc(sizeof(char *) * (s_all->map_heigth + 1));
 	if (!s_all->map)
 		ft_error(NULL);
 	i = 0;
@@ -58,34 +56,3 @@ void	make_map_array(t_all *s_all, char *map_name)
 	ft_lstclear(&head, free);
 	s_all->map[i] = NULL;
 }
-
-int	is_map(char *s)
-{
-	if (s == 0 || *s == 0)
-		return (0);
-	s = skip_space(s);
-	if (!*s)
-		return (0);
-	while(*s && *s != '\n')
-	{
-		if (*s != ' ' && *s != '1' && *s != '0' && *s != 'N' && \
-		*s != 'W' && *s != 'E' && *s != 'S' && *s != '\t')
-			return (0);
-		s++;
-	}
-	return (1);
-}
-
-int	is_map_border(char *s)
-{
-	if (s == 0 || *s == 0)
-		return (0);
-	while(*s && *s != '\n')
-	{
-		if (*s != ' ' && *s != '1' && *s != '\t')
-			return (0);
-		s++;
-	}
-	return (1);
-}
-

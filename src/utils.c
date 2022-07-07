@@ -14,32 +14,6 @@ int	ft_error(char *str)
 	exit (-1);
 }
 
-char	*skip_space(char *s)
-{
-	while(*s == ' ' || *s == '\t')
-		s++;
-	return (s);
-}
-
-int	consist_of_num_or_coma(char *s)
-{
-	size_t coma;
-
-	coma = 0;
-	if (s == 0 || *s == 0)
-		return (0);
-	while (*s) {
-		if (*s == ',')
-			coma++;
-		if ((*s <= '0' || *s >= '9') && *s != ',')
-			return (0);
-		s++;
-	}
-	if (coma != 2)
-		return (0);
-	return (1);
-}
-
 void	printarray(char **map)
 {
 	int	i;
@@ -54,14 +28,24 @@ void	printarray(char **map)
 
 void	printlist(t_list *lst)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!lst)
 		ft_error("NO LIST");
-	while(lst)
+	while (lst)
 	{
 		printf("%d %s\n", i++, lst->str);
-		lst=lst->next;
+		lst = lst->next;
 	}
+}
+
+int	check_fd(char *map_name)
+{
+	int	fd;
+
+	fd = open(map_name, O_RDONLY);
+	if (fd < 0)
+		ft_error(NULL);
+	return (fd);
 }
