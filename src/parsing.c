@@ -11,8 +11,9 @@ void parsing(char *map_name, t_all *s_all)
 	fd = check_map_file(map_name);
 	set_params(s_all, fd);
 	make_map_array(s_all, map_name);
-	check_map_borders(s_all);
 //	printarray(s_all->map);
+	check_map_borders(s_all);
+	find_player(s_all);
 }
 
 int	check_map_file(char *map_name)

@@ -63,6 +63,9 @@ int	is_map(char *s)
 {
 	if (s == 0 || *s == 0)
 		return (0);
+	s = skip_space(s);
+	if (!*s)
+		return (0);
 	while(*s && *s != '\n')
 	{
 		if (*s != ' ' && *s != '1' && *s != '0' && *s != 'N' && \

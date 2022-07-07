@@ -12,6 +12,14 @@
 # include "../minilibx/mlx.h"
 # include "../libft/libft.h"
 # include "get_next_line.h"
+# include <mlx.h>
+
+typedef struct	s_plr
+{
+	double	x;
+	double	y;
+	double	dir;
+}				t_plr;
 
 typedef struct	s_image {
 	void	*img;
@@ -23,7 +31,7 @@ typedef struct	s_image {
 	int		endian;
 }				t_image;
 
-typedef struct s_all
+typedef struct	s_all
 {
 	char		**map;
 	size_t		map_heigth;
@@ -44,8 +52,9 @@ typedef struct s_all
 	t_image		s_img;
 	t_image		e_img;
 	t_image		w_img;
-	void	*mlx;
-}			t_all;
+	void		*mlx;
+	t_plr		plr;
+}				t_all;
 
 
 void	init_struct(t_all *s_all);
@@ -64,7 +73,8 @@ t_list	*make_map_in_lists(char *map_name);
 void	make_map_array(t_all *s_all, char *map_name);
 int		is_map(char *s);
 int		is_map_border(char *s);
-int		check_map_borders(t_all *s_all);
+void	check_map_borders(t_all *s_all);
+void	find_player(t_all *s_all);
 
 ////utils
 void	printarray(char **map);
