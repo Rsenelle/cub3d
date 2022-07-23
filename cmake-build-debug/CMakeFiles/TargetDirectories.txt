@@ -1,3 +1,0 @@
-/Users/rsenelle/cub3D/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/rsenelle/cub3D/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/rsenelle/cub3D/cmake-build-debug/CMakeFiles/Cube3D.dir
